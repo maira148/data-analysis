@@ -1,0 +1,10 @@
+data<-read.csv("C:/Users/MYSTERIOUS/Downloads/heartdata.csv")
+View(data)
+head(data)
+tail(data)
+str(data)
+table(data$smoking)
+library(ggplot2)
+ggplot(data=data,aes(x=smoking ))+geom_histogram(fill='red',col='green')
+
+ggplot(data=data,aes(x=heart.disease ))+geom_histogram(fill='red',col='green')

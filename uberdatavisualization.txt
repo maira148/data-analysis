@@ -1,0 +1,10 @@
+data<-read.csv("D:/cs403/uber-raw-data-apr14.csv")
+View(data)
+head(data)
+tail(data)
+str(data)
+
+
+
+
+

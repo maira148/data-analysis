@@ -1,0 +1,5 @@
+data<-read.csv(("D:/cs403/income.data.csv")
+View(data)
+head(data)
+tail(data)
+str(data)
