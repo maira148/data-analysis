@@ -1,0 +1,24 @@
+datasets::iris
+head(iris)
+tail(iris)
+library(caTools)
+sample.split(iris$Sepal.Length,SplitRatio = 0.6)->sample
+View(sample)
+subset(iris,sample==T)->train
+subset(iris,sample==F)->test
+nrow(train)
+nrow(test)
+lm(Sepal.Length~Petal.Length,data=train)->lr
+lr
+predict(lr,newdata=test)->predict
+View(predict)
+cbind(Actual=test$Sepal.Length,predict)->fresult
+fresult
+class(fresult)
+as.data.frame(fresult)->fresult
+fresult
+fresult$Actual-fresult$predict->error
+error
+sqrt(mean((fresult$error)^2))->residual
+residual
+View(residual)
